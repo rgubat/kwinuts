@@ -1002,7 +1002,7 @@
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
               <div class="row" style="margin-bottom: 10px;">
-                <h4>Calculate Using Distance Traveled</h4>
+                <h4 style="margin-top: 10px;">Calculate Using Distance Traveled</h4>
               </div>
               <div class="row" style="margin-bottom: 10px;">
                 <div class="col-2">
@@ -1013,11 +1013,27 @@
                 </div>
                 <div class="col-3">
                   <select id="make" class="form-select" aria-label="Default select example">
-                    <option selected disabled hidden>Select Car Make</option>
+                    <option value="kilometers" selected >Kilometers</option>
+                    <option value="meters">Meters</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-2">
+                  <p>Fuel Consumed:</p>
+                </div>
+                <div class="col-2">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-3">
+                  <select id="make" class="form-select" aria-label="Default select example">
+                    <option value="literes" selected>Liters</option>
                     <option value="toyota">Toyota</option>
                   </select>
                 </div>
               </div>
+
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
           </div>
