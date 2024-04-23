@@ -1029,12 +1029,11 @@
                 <div class="col-3">
                   <select id="make" class="form-select" aria-label="Default select example">
                     <option value="literes" selected>Liters</option>
-                    <option value="toyota">Toyota</option>
                   </select>
                 </div>
               </div>
 
-              <div class="row" style="margin-bottom: 10px;">
+              <div class="row" style="margin-bottom: 10px; font-style: italic;">
                 <p>Optionally enter the price per liter or gallon</p>
               </div>
 
@@ -1054,7 +1053,78 @@
               </div>
 
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="row" style="margin-bottom: 10px;">
+                <h4 style="margin-top: 10px;">Calculate Using Current and Previous Odometer Readings</h4>
+              </div>
+              <div class="row" style="margin-bottom: 10px; font-style: bold;">
+                <p>Odometer</p>
+              </div>
+
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-2">
+                  <p>Current Reading:</p>
+                </div>
+                <div class="col-2">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-3">
+                  <select id="make" class="form-select" aria-label="Default select example">
+                    <option value="kilometers" selected >Kilometers</option>
+                    <option value="meters">Meters</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-2">
+                  <p>Previous Reading:</p>
+                </div>
+                <div class="col-2">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-3">
+                  <select id="make" class="form-select" aria-label="Default select example">
+                    <option value="kilometers" selected >Kilometers</option>
+                    <option value="meters">Meters</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-2">
+                  <p>Fuel Added:</p>
+                </div>
+                <div class="col-2">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="col-3">
+                  <select id="make" class="form-select" aria-label="Default select example">
+                    <option value="literes" selected>Liters</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row" style="margin-bottom: 10px; font-style: italic;">
+                <p>Optionally enter the price per liter or gallon</p>
+              </div>
+
+              <div class="row" style="margin-bottom: 10px;">
+                <div class="col-2">
+                  <p>Fuel Cost:</p>
+                </div>
+                <div class="col-2">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+
+              <div class="row" style="margin-bottom:10px;">
+                <div class="col-2">
+                  <button type="button" class="btn btn-success">Calculate</button>
+                </div>
+              </div>
+
+            </div>
           </div>
 
         <div class="modal-footer">
