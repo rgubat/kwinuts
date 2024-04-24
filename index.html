@@ -1147,7 +1147,7 @@
         var type = $('#type').val();
         var trip = $('#trip').val();
         var fuel_consumed = parseFloat(trip) / parseFloat(type);
-        $('#fuel').val(fuel_consumed);
+        $('#fuel').val(fuel_consumed.toFixed(2));
       });
     });
       
