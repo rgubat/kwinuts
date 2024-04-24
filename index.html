@@ -1009,7 +1009,7 @@
                   <p>Trip Distance:</p>
                 </div>
                 <div class="col-2">
-                  <input type="text" class="form-control">
+                  <input id="trip" type="text" class="form-control">
                 </div>
                 <div class="col-3">
                   <select id="make" class="form-select" aria-label="Default select example">
@@ -1145,6 +1145,10 @@
     $(document).ready( function(){
       $('#calculate').on('click', function(){
         alert('nen');
+        var type = $('#type').val();
+        var trip = $('#trip').val();
+        var fuel_consumed = parseFloat(type) / parseFloat(trip);
+        $('#fuel').val(fuel_consumed);
       });
     });
       
