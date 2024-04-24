@@ -1021,15 +1021,10 @@
 
               <div class="row" style="margin-bottom: 10px;">
                 <div class="col-2">
-                  <p>Fuel Consumed:</p>
+                  <p>Fuel Consumed (L):</p>
                 </div>
                 <div class="col-2">
-                  <input type="text" class="form-control">
-                </div>
-                <div class="col-3">
-                  <select id="make" class="form-select" aria-label="Default select example">
-                    <option value="literes" selected>Liters</option>
-                  </select>
+                  <input id="fuel" type="text" readonly class="form-control">
                 </div>
               </div>
 
@@ -1048,7 +1043,7 @@
 
               <div class="row" style="margin-bottom:10px;">
                 <div class="col-2">
-                  <button type="button" class="btn btn-success">Calculate</button>
+                  <button id="calculate" type="button" class="btn btn-success">Calculate</button>
                 </div>
               </div>
 
@@ -1145,6 +1140,15 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(document).ready( function(){
+      $('#calculate').on('click', function(){
+        alert('nen');
+      });
+    });
+      
+  </script>
 
 </body>
 
