@@ -1156,14 +1156,30 @@
       ];
 
       var vios_year = ['2013','2014'];
+      var vios_altis_year = ['2015','2016','2017','2018','2019','2020'];
 
       $('#year').on('change', function(){
         var value = $(this).val();
           if(vios_year.includes(value)){
-            addOption('Vios', 'Vios');
+            addOption('toyota', 'Toyota', 'make');
+          }else if(vios_altis_year.includes(value)){
+            addOption('toyota', 'Toyota', 'make');
           }else{
-            clearOptionsExceptFirst();
+            clearOptionsExceptFirst('make');
           }
+      });
+
+      $('#make').on('change', function(){
+        var year = $('#year').val();
+        var val = $(this).val();
+        if(vios_year.includes(year) && val == 'toyota'){
+          addOption('vios', 'Vios', 'model');
+        }else if(vios_altis_year.includes(value) && val == 'toyota'){
+          addOption('vios', 'Vios', 'model');
+          addOption('altis', 'Altis', 'model');
+        }else{
+          clearOptionsExceptFirst('model');
+        }
       });
 
       $('#calculate').on('click', function(){
@@ -1173,15 +1189,15 @@
         $('#fuel').val(fuel_consumed.toFixed(2));
       });
 
-      function addOption(value, text) {
-          $('#make').append($('<option>', {
+      function addOption(value, text, id) {
+          $('#'+id).append($('<option>', {
               value: value,
               text: text
           }));
       }
 
-      function clearOptionsExceptFirst() {
-          $('#make option:not(:first)').remove(); // Removes all except the first option
+      function clearOptionsExceptFirst(id) {
+          $('#'+id+' option:not(:first)').remove(); // Removes all except the first option
       }
     });
       
