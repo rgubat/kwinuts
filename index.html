@@ -974,7 +974,7 @@
                 <option selected>Select Model</option>
               </select>
             </div>
-            <div class="col-3">
+            <!-- <div class="col-3">
               <select id="type" class="form-select" aria-label="Default select example">
                 <option selected disabled hidden>Select Type</option>
                 <option value="19.9">1.3 M/T (19.9km/L)</option>
@@ -984,7 +984,7 @@
                 <option value="1.3 E A/T">1.3 E A/T</option>
                 <option value="1.5 G A/T">1.5 G A/T</option>
               </select>
-            </div>
+            </div> -->
           </div>
 
           <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -1189,9 +1189,17 @@
       });
 
       $('#calculate').on('click', function(){
-        var type = $('#type').val();
-        var trip = $('#trip').val();
-        var fuel_consumed = parseFloat(trip) / parseFloat(type);
+        var make = $('#make').val();
+        var fuel_consumed;
+
+        if(make.trim() == 'altis'){
+          fuel_consumed = parseFloat(trip) / parseFloat(13);
+        }else if(make.trim() == 'vios'){
+          fuel_consumed = parseFloat(trip) / parseFloat(15);
+        }else{
+          fuel_consumed = 0.00;
+        }
+
         $('#fuel').val(fuel_consumed.toFixed(2));
       });
 
