@@ -1194,12 +1194,13 @@
         console.log(model);
 
         if(model.trim() == 'altis'){
-          fuel_consumed = parseFloat(trip) / parseFloat(13);
+          fuel_consumed = parseFloat(trip) / 13;
         }else if(model.trim() == 'vios'){
-          fuel_consumed = parseFloat(trip) / parseFloat(15);
+          fuel_consumed = parseFloat(trip) / 15;
         }else{
           fuel_consumed = 0.00;
         }
+        console.log(fuel_consumed);
 
         $('#fuel').val(fuel_consumed.toFixed(2));
       });
