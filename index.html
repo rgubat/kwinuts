@@ -967,7 +967,6 @@
             <div class="col-3">
               <select id="make" class="form-select" aria-label="Default select example">
                 <option selected disabled hidden>Select Car Make</option>
-                <option value="toyota">Toyota</option>
               </select>
             </div>
             <div class="col-3">
@@ -1143,12 +1142,47 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     $(document).ready( function(){
+      var values = [ 
+        {
+          '2013' : ['Vios'],
+          '2014' : ['Vios'],
+          '2015' : ['Altis','Vios'],
+          '2016' : ['Altis','Vios'],
+          '2017' : ['Altis','Vios'],
+          '2018' : ['Altis','Vios'],
+          '2019' : ['Altis','Vios'],
+          '2020' : ['Altis','Vios'],
+        }
+      ];
+
+      var vios_year = ['2013','2014'];
+
+      $('#year').on('change', function(){
+        var value = $(this).val();
+          if(vios_year.includes(value)){
+            addOption('Vios', 'Vios');
+          }else{
+            clearOptionsExceptFirst();
+          }
+      });
+
       $('#calculate').on('click', function(){
         var type = $('#type').val();
         var trip = $('#trip').val();
         var fuel_consumed = parseFloat(trip) / parseFloat(type);
         $('#fuel').val(fuel_consumed.toFixed(2));
       });
+
+      function addOption(value, text) {
+          $('#year').append($('<option>', {
+              value: value,
+              text: text
+          }));
+      }
+
+      function clearOptionsExceptFirst() {
+          $('#mySelect option:not(:first)').remove(); // Removes all except the first option
+      }
     });
       
   </script>
