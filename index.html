@@ -1169,6 +1169,7 @@
       $('#make').on('change', function(){
         var year = $('#year').val();
         var val = $(this).val();
+        console.log(year,val);
         console.log('make action');
         if(vios_year.includes(year) && val == 'toyota'){
           console.log('make action true');
