@@ -1158,11 +1158,13 @@
       $('#year').on('change', function(){
         var value = $(this).val();
           clearOptionsExceptFirst('make');
+          clearOptionsExceptFirst('model');
           if(vios_year.includes(value)){
             addOption('toyota', 'Toyota', 'make');
           }else if(vios_altis_year.includes(value)){
             addOption('toyota', 'Toyota', 'make');
           }else{
+            clearOptionsExceptFirst('model');
             clearOptionsExceptFirst('make');
           }
       });
