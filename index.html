@@ -1169,6 +1169,8 @@
       $('#make').on('change', function(){
         var year = $('#year').val();
         var val = $(this).val();
+        console.log(year);
+        console.log(val);
         if(vios_year.includes(year) && val == 'toyota'){
           addOption('vios', 'Vios', 'model');
         }else if(vios_altis_year.includes(value) && val == 'toyota'){
