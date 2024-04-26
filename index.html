@@ -1191,6 +1191,7 @@
       $('#calculate').on('click', function(){
         var model = $('#model').val();
         var fuel_consumed;
+        console.log(model);
 
         if(model.trim() == 'altis'){
           fuel_consumed = parseFloat(trip) / parseFloat(13);
