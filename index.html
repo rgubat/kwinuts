@@ -1187,18 +1187,19 @@
         $('#fuel').val(fuel_consumed.toFixed(2));
       });
 
-      function addOption(value, text, id) {
-        console.log(value,text,id);
-          $('#'+id).append($('<option>', {
-              value: value,
-              text: text
-          }));
-      }
-
-      function clearOptionsExceptFirst(id) {
-          $('#'+id+' option:not(:first)').remove(); // Removes all except the first option
-      }
     });
+
+    function addOption(value, text, id) {
+      console.log(value,text,id);
+        $('#'+id).append($('<option>', {
+            value: value,
+            text: text
+        }));
+    }
+
+    function clearOptionsExceptFirst(id) {
+        $('#'+id+' option:not(:first)').remove(); // Removes all except the first option
+    }
       
   </script>
 
