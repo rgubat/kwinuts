@@ -1189,12 +1189,12 @@
       });
 
       $('#calculate').on('click', function(){
-        var make = $('#make').val();
+        var model = $('#model').val();
         var fuel_consumed;
 
-        if(make.trim() == 'altis'){
+        if(model.trim() == 'altis'){
           fuel_consumed = parseFloat(trip) / parseFloat(13);
-        }else if(make.trim() == 'vios'){
+        }else if(model.trim() == 'vios'){
           fuel_consumed = parseFloat(trip) / parseFloat(15);
         }else{
           fuel_consumed = 0.00;
